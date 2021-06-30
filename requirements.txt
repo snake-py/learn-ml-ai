@@ -1,0 +1,9 @@
+ipykernel
+ipython
+ipython-genutils
+jupyter-client
+jupyter-core
+matplotlib
+numpy
+pandas
+sklearn
