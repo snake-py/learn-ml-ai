@@ -43,5 +43,7 @@ However, the essential downside is that not all datasets will be scaled to the e
 
 # Resources
 https://www.codecademy.com/articles/normalization
+
 https://medium.com/@TheDataGyan/day-8-data-transformation-skewness-normalization-and-much-more-4c144d370e55
+
 https://www.oreilly.com/library/view/regression-analysis-with/9781788627306/6bb0d820-6200-4bfe-aa91-e7b7ffa2a9c1.xhtml
