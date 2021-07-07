@@ -9,7 +9,9 @@ Lets say we want to make a recommendation system for movies. In this case the en
 Lets say our favorite movie was made in 2005 and the used budget for the movie was 1,000,000$ and is inside the action genre. Now the algorithm needs to check which other movie is very close to this one. It is doing that by calculating the distance of nearby neighbors. However, since the scale of our axises is vastly different the impact of budget will always be bigger. 
 
 Lets say in our database are following movies:
+<br>
 movie 1: produced in 1955 with a budget of 1,000,000$ 
+<br>
 movie 2: produced in 2005 with a budget of 1,000,050$
 
 If we calculate the euclidean distance for these to movies to our favorite movie both will have the same distance, however in reality it makes a huge different if a movie was produced 50 years ago, but only a little difference if the budget was 50$ higher. Therefore, the data needs to be normalized. 
