@@ -24,15 +24,15 @@ It is based on this formula:
 
 The mathematical general approach for multiple-linear-regression is: 
 
-<img src="../pictures/multiple-linear-regression-eq.PNG">
+<img src="../../pictures/multiple-linear-regression-eq.PNG">
 
 To evaluate the models accuracy two values can be calculated - the residual e or the <strong>coefficient of determination R<sup>2</sup></strong> 
 
 y is the actual value and ŷ is the predicted value from the model
-<img src="../pictures/coefficient-r-squared.PNG">
+<img src="../../pictures/coefficient-r-squared.PNG">
 
 u is the sum of the square difference of y values minus y_predicted and v is the sum of the square difference of y values minus y mean 
-<img src="../pictures/residual-eq.PNG">
+<img src="../../pictures/residual-eq.PNG">
 
 u:
 ```python
