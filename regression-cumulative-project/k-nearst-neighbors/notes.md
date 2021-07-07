@@ -8,13 +8,13 @@ In essence the algorithm needs to calculate the distance to all surrounding poin
 
 The three steps of the k algo
 
-1. Normalize the data
+1. Normalize the data (more info can be found <a href="../normalization.md">here</a>)
 2. Find the k nearest neighbors
 3. Classify the new point based on those neighbors
 
 ## Step 1 normalize the data
 
-it is important that all data points have the same impact on the model. Hence the data need to normalized, which means all values are brought to a number between 0 and 1. See the following python implementation. 
+it is important that all data points have the same impact on the model. Hence the data need to normalized, which means all values are brought to a number between 0 and 1. See the following python implementation. (more info can be found <a href="../normalization.md">here</a>)
 
 ```python
 def min_max_normalize(lst):
