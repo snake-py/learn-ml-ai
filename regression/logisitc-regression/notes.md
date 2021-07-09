@@ -46,6 +46,41 @@ In fact this means that all possible odds are stretched to a normal distribution
 source: https://www.youtube.com/watch?v=ARfXDSkQf1Y
 
 
+## Code implementation for machine learning
+
+### Log-Loss
+
+*insert notes*
+
+### Log-Loss coefficient
+
+https://www.youtube.com/watch?v=vN5cNN2-HWE 
+
+
+
+```python
+import numpy as np
+
+def log_odds(features, coefficient, intercept):
+  return np.dot(features, coefficient) + intercept
+```
+
+## Sigmoid Function
+
+The sigmoid function maps the log-odds to a range of 0 to 1. 
+
+<img src="./sigmoid-eq.png">
+
+
+```python
+import numpy as np
+
+def sigmoid(z): # z = array of log-odds
+  denominator = 1 + np.exp(-z)
+  return 1/denominator
+```
+
+
 # Resources
 
 Cheatsheet https://www.codecademy.com/learn/paths/machine-learning/tracks/introduction-to-supervised-learning-skill-path/modules/logistic-regression-skill-path/cheatsheet
