@@ -26,8 +26,9 @@ odds = p(Event A) / p(Event B) -> p(Event A) / 1 - p(Event A) -> 0.2 / 0.8 = 0.2
 
 Simplification:
 
-odds = \frac{p}{1 - p}
-
+```math
+odds = p / (1 - p)
+```
 
 Now that we understood probability and odd dependency, let us talk about the problem of odds. The main weakness is that if the probability of something will happening (Event A) is fairly small it becomes negligible, because its odd will be very small (0 to 1), however the opposing event scales up to infinity (1 to infinity). 
 
