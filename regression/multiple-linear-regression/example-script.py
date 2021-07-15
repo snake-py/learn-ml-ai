@@ -39,3 +39,4 @@ plt.show()
 # zoe_apartment = [[1, 1, 620, 16, 1, 98, 0, 0, 1, 0, 0, 0, 1, 0]]
 # predict = model.predict(zoe_apartment)
 # print("Predicted rent: $%.2f" % predict)
+

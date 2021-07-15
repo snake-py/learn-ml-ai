@@ -67,8 +67,7 @@ def log_odds(features, coefficient, intercept):
 
 ## Sigmoid Function
 
-The sigmoid function maps the log-odds to a range of 0 to 1. 
-
+The sigmoid function maps the log-odds to a range of 0 to 1. Providing the probability of a sample belonging to a class A or B.
 <img src="./sigmoid-eq.png">
 
 
