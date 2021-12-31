@@ -108,3 +108,24 @@ some_text = "This is a sample sentence, showing off the stop words filtration."
 tokenized_text = word_tokenize(some_text)
 stemmed = [lemmatizer.lemmatize(word, get_part_of_speech(word)) for word in tokenized_text]
 ```
+
+# Example of preprocessing
+```python	
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.stem import WordNetLemmatizer
+from part_of_speech import get_part_of_speech
+import re
+
+lemmatizer = WordNetLemmatizer()
+
+input_text = '<p>A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. Many cryptocurrencies are decentralized networks based on blockchain technology.</p>'
+
+inner_paragraph = re.sub('<.?p>', '', input_text)
+removed_periods = re.sub('\.', '', inner_paragraph)
+text_lower = removed_periods.lower()
+
+tokenized = word_tokenize(text_lower)
+lemmatized = [lemmatizer.lemmatize(word, get_part_of_speech(word)) for word in tokenized]
+
+print(tokenized)
+```
