@@ -1,10 +1,17 @@
 import nltk, re
+
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('corpus')
+nltk.download('omw-1.4')
+nltk.download('wordnet')
+
+
 from nltk.corpus import wordnet
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from collections import Counter
-
 stop_words = stopwords.words('english')
 normalizer = WordNetLemmatizer()
 
@@ -33,3 +40,16 @@ def text_to_bow(some_text):
     else:
       bow_dictionary[token] = 1
   return bow_dictionary
+
+def text_to_bow_vector(some_text, features_dictionary ):
+  bow_vector = [0 for key in features_dictionary.keys()]
+  tokens = preprocess_text(some_text)
+  for token in tokens:
+    feature_index = features_dictionary[token]
+    bow_vector[feature_index] += 1
+  return bow_vector, tokens
+
+features_dictionary = {'function': 8, 'please': 14, 'find': 6, 'five': 0, 'with': 12, 'fantastic': 1, 'my': 11, 'another': 10, 'a': 13, 'maybe': 9, 'to': 5, 'off': 4, 'faraway': 7, 'fish': 2, 'fly': 3}
+
+text = "Another five fish find another faraway fish."
+print(text_to_bow_vector(text, features_dictionary)[0])

@@ -184,3 +184,27 @@ With this we can create a feature vector - following the table view of the featu
 | article 3 | 1         | 1       | 1           | 1                        | 1                        |
 
 With these vectors we can calculate the similarity between two documents, by calculate the distance.
+
+But how to determine if the feature is included in the text?
+
+This is known a s feature extraction or vectorization process. Therefore all the words of a text are counted and then it is checked if the condition is met toi assign a feature value.
+
+codecademy is showing this feature extraction process 
+```python
+def create_features_dictionary(documents):
+  features_dictionary  = {}
+  merged = ' '.join(documents)
+  tokens = preprocess_text(merged)
+  index = 0
+  for token in tokens:
+    if token not in features_dictionary:
+      features_dictionary[token] = index
+      index += 1
+  return features_dictionary, tokens
+
+
+training_documents = ["Five fantastic fish flew off to find faraway functions.", "Maybe find another five fantastic fish?", "Find my fish with a function please!"]
+
+print(create_features_dictionary(training_documents)[0])
+```
+
